@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .square {
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+      position: relative;
+      animation: squa-move 9s linear infinite,
+        color-change 10s ease-in-out infinite,
+        rotate 2s linear infinite;
+    }
+
+    .board {
+      width: 60px;
+      height: 20px;
+      border-radius: 20px;
+      position: relative;
+      animation: board 6s linear infinite,
+        color-b 7s linear infinite;
+    }
+
+    .temp {
+      height: 580px;
+    }
+
+    @keyframes squa-move {
+      0% {
+        /*         top: 0px;
+        left: 0px; */
+        top: 0px;
+        left: 622px;
+      }
+
+      25% {
+        /*         top: 0px;
+        left: 1255px; */
+        top: 282px;
+        left: 1240px;
+      }
+
+      50% {
+        /*         top: 575px;
+        left: 1255px; */
+        top: 575px;
+        left: 622px;
+      }
+
+      75% {
+        /*         top: 575px;
+        left: 0px; */
+        top: 282px;
+        left: 0px;
+      }
+
+      100% {
+        top: 0px;
+        left: 622px;
+      }
+    }
+
+    @keyframes color-change {
+      0% {
+        background-color: red;
+      }
+
+      25% {
+        background-color: yellow;
+      }
+
+      50% {
+        background-color: green;
+      }
+
+      75% {
+        background-color: blue;
+      }
+
+      100% {
+        background-color: red;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes board {
+      0% {
+        bottom: 10px;
+        left: 0px;
+      }
+
+      50% {
+        bottom: 10px;
+        left: 1240px;
+      }
+
+      100% {
+        bottom: 10px;
+        left: 0px;
+      }
+    }
+
+    @keyframes color-b {
+      0% {
+        background-color: grey;
+      }
+
+      100% {
+        background-color: grey;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="square"></div>
+  <div class="temp"></div>
+  <div class="board"></div>
+</body>
+
+</html>
